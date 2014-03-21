@@ -13,6 +13,7 @@ import android.support.v4.app.TaskStackBuilder;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -115,10 +116,14 @@ public class MainActivity extends Activity {
 
 		notificationManager.notify(1, builder.build());
 
-		// Vibrate the device
-		// Vibrating is not necessary
-		Vibrator v = (Vibrator) this.getSystemService(Context.VIBRATOR_SERVICE);
-		// Vibrate for 250 milliseconds
-		v.vibrate(250);
+		CheckBox vibrate = (CheckBox) findViewById(R.id.vibrateBox);		
+		
+		if (vibrate.isChecked()) {
+			// Vibrate the device
+			// Vibrating is not necessary
+			Vibrator v = (Vibrator) this.getSystemService(Context.VIBRATOR_SERVICE);
+			// Vibrate for 250 milliseconds
+			v.vibrate(250);
+		}
 	}
 }

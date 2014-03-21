@@ -46,4 +46,13 @@
         android:text="Go!"
         android:onClick="goButtonClicked" />
 
+    <CheckBox
+        android:id="@+id/vibrateBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Vibrate Phone" />
+
 </RelativeLayout>
